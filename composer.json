@@ -9,5 +9,17 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "RexDevs\\Documentation\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RexDevs\\Documentation\\DocumentationServiceProvider"
+            ]
+        }
+    }
 }
