@@ -1,0 +1,13 @@
+{
+    "name": "rex-devs/documentation",
+    "description": "A Laravel documentation package, that adds the ability to add multiple documentation sections to an existing site, while also choosing custom urls for each.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Justin Byrne",
+            "email": "justin@rex-devs.co.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
