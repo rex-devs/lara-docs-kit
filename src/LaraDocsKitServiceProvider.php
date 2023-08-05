@@ -14,8 +14,7 @@ class LaraDocsKitServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        Route::prefix('lara-docs-kit')
-            ->as('lara-docs-kit.')
+        Route::as('lara-docs-kit.')
             ->group(function () {
                 $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
             });
