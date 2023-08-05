@@ -28,5 +28,7 @@ class DocumentationController extends Controller
                 return $route;
             }
         }
+
+        return [];
     }
 }
