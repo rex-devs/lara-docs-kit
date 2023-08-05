@@ -9,7 +9,7 @@ class LaraDocsKitServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        //
+        $this->mergeConfigFrom(__DIR__.'/../config/lara-docs-kit.php', 'lara-docs-kit');
     }
 
     public function boot()
