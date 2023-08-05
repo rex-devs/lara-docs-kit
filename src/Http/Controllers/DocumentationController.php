@@ -5,7 +5,7 @@ namespace RexDevs\LaraDocsKit\Http\Controllers;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Route;
 
-class RoleController extends Controller
+class DocumentationController extends Controller
 {
     public function __invoke(?string $file = null)
     {
