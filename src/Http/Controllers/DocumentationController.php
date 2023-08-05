@@ -1,6 +1,6 @@
 <?php
 
-namespace RexDevs\Documentation\Http\Controllers;
+namespace RexDevs\LaraDocsKit\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +22,7 @@ class RoleController extends Controller
     {
         $routeName = Route::currentRouteName();
 
-        $configRoutes = config('documentation.routes');
+        $configRoutes = config('lara-docs-kit.routes');
 
         foreach ($configRoutes as $route) {
             if ($route['name'] == $routeName) {

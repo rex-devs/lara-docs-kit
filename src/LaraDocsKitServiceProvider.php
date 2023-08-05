@@ -1,11 +1,11 @@
 <?php
 
-namespace RexDevs\Documentation;
+namespace RexDevs\LaraDocsKit;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
-class DocumentationServiceProvider extends ServiceProvider
+class LaraDocsKitServiceProvider extends ServiceProvider
 {
     public function register()
     {
@@ -14,16 +14,16 @@ class DocumentationServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        Route::prefix('documentation')
-            ->as('documentation.')
+        Route::prefix('lara-docs-kit')
+            ->as('lara-docs-kit.')
             ->group(function () {
                 $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
             });
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/documentation.php' => config_path('documentation.php'),
-            ], 'documentation-config');
+                __DIR__.'/../config/lara-docs-kit.php' => config_path('lara-docs-kit.php'),
+            ], 'lara-docs-kit-config');
         }
     }
 }

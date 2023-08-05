@@ -1,5 +1,5 @@
 {
-    "name": "rex-devs/documentation",
+    "name": "rex-devs/lara-docs-kit",
     "description": "A Laravel documentation package, that adds the ability to add multiple documentation sections to an existing site, while also choosing custom urls for each.",
     "license": "MIT",
     "authors": [
@@ -11,13 +11,13 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "RexDevs\\Documentation\\": "src"
+            "RexDevs\\LaraDocsKit\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "RexDevs\\Documentation\\DocumentationServiceProvider"
+                "RexDevs\\LaraDocsKit\\LaraDocsKitServiceProvider"
             ]
         }
     },
