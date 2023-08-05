@@ -19,5 +19,11 @@ class DocumentationServiceProvider extends ServiceProvider
             ->group(function () {
                 $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
             });
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/documentation.php' => config_path('documentation.php'),
+            ], 'documentation-config');
+        }
     }
 }
