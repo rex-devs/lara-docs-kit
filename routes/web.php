@@ -7,6 +7,7 @@ if (! is_null(config('lara-docs-kit.routes')) && is_array(config('lara-docs-kit.
     foreach (config('lara-docs-kit.routes') as $route) {
         Route::get($route['url'].'/{file?}', DocumentationController::class)
             ->where('file', '.+')
+            ->middleware($route['middleware'])
             ->name($route['name']);
     }
 }

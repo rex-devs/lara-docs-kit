@@ -6,6 +6,9 @@ return [
             'name' => 'docs',
             'url' => '/docs',
             'dir' => '/docs',
+            'middleware' => [
+                'web',
+            ],
         ],
     ],
 ];
