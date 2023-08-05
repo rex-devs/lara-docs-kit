@@ -30,11 +30,17 @@
         "spatie/laravel-ray": "^1.32",
         "orchestra/testbench": "^8.0",
         "pestphp/pest": "^2.12",
-        "pestphp/pest-plugin-laravel": "^2.1"
+        "pestphp/pest-plugin-laravel": "^2.1",
+        "nunomaduro/larastan": "^2.6"
     },
     "config": {
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
     }
 }
