@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use RexDevs\LaraDocsKit\Http\Controllers\DocumentationController;
 
-foreach (config('lara-docs-kit.routes') as $routes) {
-    Route::get($route['url'].'/{file?}', DocumentationController::class)
-        ->where('file', '.+')
-        ->name($route['name']);
+if (! is_null(config('lara-docs-kit.routes')) && is_array(config('lara-docs-kit.routes'))) {
+    foreach (config('lara-docs-kit.routes') as $route) {
+        Route::get($route['url'].'/{file?}', DocumentationController::class)
+            ->where('file', '.+')
+            ->name($route['name']);
+    }
 }
