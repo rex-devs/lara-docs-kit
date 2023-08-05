@@ -20,12 +20,11 @@ class DocumentationController extends Controller
 
     private function getConfigOptions(): array
     {
+        $configRoutes = config('lara-docs-kit.routes');
         $routeName = Route::currentRouteName();
 
-        $configRoutes = config('lara-docs-kit.routes');
-
         foreach ($configRoutes as $route) {
-            if ($route['name'] == $routeName) {
+            if ('lara-docs-kit.'.$route['name'] == $routeName) {
                 return $route;
             }
         }
