@@ -5,10 +5,12 @@ return [
         [
             'name' => 'docs',
             'url' => '/docs',
-            'dir' => '/docs',
+            'dir' => 'docs/',
             'middleware' => [
                 'web',
             ],
         ],
     ],
+
+    'theme' => 'dark-plus',
 ];
