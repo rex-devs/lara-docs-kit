@@ -18,7 +18,7 @@ it('has a route for every route in the routes array in the config file', functio
     expect(Route::has('lara-docs-kit.documentation'))->toBeTrue();
 });
 
-it('has no routes if the config file it empty', function () {
+it('has no routes if the config file is empty', function () {
     Config::set('lara-docs-kit.routes', []);
 
     expect(Route::has('lara-docs-kit.docs'))->toBeFalse();
