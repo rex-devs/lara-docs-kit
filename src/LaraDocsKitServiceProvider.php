@@ -19,10 +19,16 @@ class LaraDocsKitServiceProvider extends ServiceProvider
                 $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
             });
 
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'lara-docs-kit');
+
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/lara-docs-kit.php' => config_path('lara-docs-kit.php'),
             ], 'lara-docs-kit-config');
+
+            $this->publishes([
+                __DIR__.'/../resources/views' => resource_path('views/vendor/lara-docs-kit'),
+            ], 'lara-docs-kit-views');
         }
     }
 }
