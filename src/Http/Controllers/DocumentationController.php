@@ -61,7 +61,7 @@ class DocumentationController extends Controller
     private function getHtml(string $markdown): string
     {
         return app(MarkdownRenderer::class)
-            ->highlightTheme(config('lara-docs-kit.theme'))
+            ->highlightTheme(config('lara-docs-kit.highlight_theme'))
             ->toHtml($markdown);
     }
 }

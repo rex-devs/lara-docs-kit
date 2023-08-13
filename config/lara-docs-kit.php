@@ -12,5 +12,5 @@ return [
         ],
     ],
 
-    'theme' => 'dark-plus',
+    'highlight_theme' => env('LDK_HIGHLIGHT_THEME', 'dark-plus'),
 ];
