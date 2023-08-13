@@ -19,9 +19,12 @@ class DocumentationController extends Controller
             filename: $file
         );
 
+        $matter = $contents->matter();
         $html = $this->getHtml($contents->body());
 
-        return $html;
+        return view('lara-docs-kit::index')
+            ->with('matter', $matter)
+            ->with('html', $html);
     }
 
     private function getConfigOptions(): array
