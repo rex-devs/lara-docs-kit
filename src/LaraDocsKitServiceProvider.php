@@ -2,6 +2,7 @@
 
 namespace RexDevs\LaraDocsKit;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -20,6 +21,7 @@ class LaraDocsKitServiceProvider extends ServiceProvider
             });
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'lara-docs-kit');
+        Blade::componentNamespace('RexDevs\\LaraDocsKit\\View\\Components', 'lara-docs-kit');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
