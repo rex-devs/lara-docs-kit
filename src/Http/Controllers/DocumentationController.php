@@ -5,6 +5,7 @@ namespace RexDevs\LaraDocsKit\Http\Controllers;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
+use RexDevs\LaraDocsKit\Services\NavService;
 use Spatie\LaravelMarkdown\MarkdownRenderer;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 
@@ -22,9 +23,12 @@ class DocumentationController extends Controller
         $matter = $contents->matter();
         $html = $this->getHtml($contents->body());
 
+        $navItems = (new NavService)->getNav($config['dir'], $config['url']);
+
         return view('lara-docs-kit::index')
             ->with('matter', $matter)
-            ->with('html', $html);
+            ->with('html', $html)
+            ->with('navItems', $navItems);
     }
 
     private function getConfigOptions(): array
