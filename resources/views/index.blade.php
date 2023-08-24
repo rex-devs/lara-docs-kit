@@ -18,22 +18,8 @@
                             <x-lara-docs-kit::logo />
                         </a>
                     </div>
-                    
-                    <nav class="hidden lg:mt-10 lg:block">
-                        <ul role="list">
-                            <li>
-                                <a class="block py-1 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="/">API</a>
-                            </li>
 
-                            <li>
-                                <a class="block py-1 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#">Documentation</a>
-                            </li>
-
-                            <li>
-                                <a class="block py-1 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white" href="#">Support</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <x-lara-docs-kit::nav.desktop :navItems="$navItems" />
                 </div>
             </header>
         </div>
