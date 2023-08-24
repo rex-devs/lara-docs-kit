@@ -52,6 +52,10 @@ class DocumentationController extends Controller
                 $filename = 'index';
             }
 
+            if (is_dir(resource_path($dir.$filename))) {
+                $filename .= '/index';
+            }
+
             $contents = file_get_contents(resource_path($dir.$filename.'.md'));
 
             return YamlFrontMatter::parse($contents);
