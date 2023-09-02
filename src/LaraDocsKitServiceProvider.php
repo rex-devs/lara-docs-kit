@@ -31,6 +31,10 @@ class LaraDocsKitServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../resources/views' => resource_path('views/vendor/lara-docs-kit'),
             ], 'lara-docs-kit-views');
+
+            $this->publishes([
+                __DIR__.'/../resources/assets' => public_path('lara-docs-kit'),
+            ], 'lara-docs-kit-assets');
         }
     }
 }
