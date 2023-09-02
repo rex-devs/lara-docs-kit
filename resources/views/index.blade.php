@@ -19,7 +19,7 @@
                         </a>
                     </div>
 
-                    <x-lara-docs-kit::nav.desktop :navItems="$navItems" />
+                    <x-lara-docs-kit::nav :navItems="$navItems" />
                 </div>
             </header>
         </div>
