@@ -23,14 +23,20 @@ php artisan vendor:publish --tag=lara-docs-kit-config
 3. Customize the configuration file located at `config/lara-docs-kit.php`
 according to your project's requirements.
 
-4. To enable the syntax highlighting the javascript package shiki is needed to
+4. Publish the tailwind css file.
+
+```bash
+php artisan vendor:publish --tag=lara-docs-kit-assets
+```
+
+5. To enable the syntax highlighting the javascript package shiki is needed to
 be installed in the project. It can be install via npm:
 
 ```bash
 npm install shiki
 ```
 
-5. That's it! You're now ready to start using lara-docs-kit for your Laravel
+6. That's it! You're now ready to start using lara-docs-kit for your Laravel
 documentation needs.
 
 ## Usage
